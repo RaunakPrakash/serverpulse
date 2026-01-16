@@ -37,5 +37,11 @@ jobs:
       - name: Test
         run: make test
 
+      - name: Race
+        run: make race
+
       - name: Build
         run: make build
+
+      - name: Coverage
+        run: make coverage
