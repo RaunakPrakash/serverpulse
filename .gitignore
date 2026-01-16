@@ -1,0 +1,6 @@
+/build
+/build-linux-amd64
+/.idea
+/coverage.*
+*.mmdb
+/vendor
