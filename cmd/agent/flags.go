@@ -10,6 +10,7 @@ type flags struct {
 	endpoint        string
 	apiKey          string
 	debug           bool
+	diskPath        string
 }
 
 func newFlags() *flags {
@@ -18,6 +19,7 @@ func newFlags() *flags {
 		endpoint:        "",
 		apiKey:          "",
 		debug:           false,
+		diskPath:        "/",
 	}
 }
 
@@ -52,6 +54,13 @@ func getFlags() *flags {
 		"debug",
 		flg.debug,
 		"enable debug logging",
+	)
+
+	fs.StringVar(
+		&flg.diskPath,
+		"disk-path",
+		flg.diskPath,
+		"disk path to monitor",
 	)
 
 	_ = fs.Parse(os.Args[1:])

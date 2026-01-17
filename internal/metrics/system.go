@@ -28,8 +28,8 @@ func (s *SystemCollector) Memory() (float64, error) {
 	return v.UsedPercent, nil
 }
 
-func (s *SystemCollector) Disk() (float64, error) {
-	u, err := disk.Usage("/")
+func (s *SystemCollector) Disk(path string) (float64, error) {
+	u, err := disk.Usage(path)
 	if err != nil {
 		return 0, err
 	}

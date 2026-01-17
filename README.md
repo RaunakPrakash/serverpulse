@@ -91,6 +91,7 @@ Available flags:
 - `-endpoint`: Server endpoint URL (for future server integration)
 - `-apikey`: API key for authentication (for future server integration)
 - `-debug`: Enable debug logging
+- `-disk-path`: Disk path to monitor (default: "/")
 
 ### Testing
 
